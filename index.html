@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <img src="images/Dhyey.jpeg" id="heroimage">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#"> Projects</a></li>
+                    <li><a href="#"> Contact </a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p> Frontend / Backend Developer</p>
+                <h1>Hi , I'm <span> Dhyey </span><br>Pradip from UK </h1>
+            </div>
+        </div>
+    </div>
+    <!--about-->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/my pic.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me </h1>
+                    <p>Software engineering student
+                        at the University of Leicester
+                        currently pursuing a BSc, with previous
+                        background in IT and experience in programming
+                        languages like Java, Python, C++. Developed
+                        strong technical abilities as well as soft skills
+                        in communication, teamwork, and time management.
+                        Passionate about building usable products to
+                        solve real-world problems.</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link"onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span> Web Development</span><br>Building Interactive Websites</li>
+                            <li> <span> Game Development </span><br>Developing Games </li>
+                            <li> <span> Database</span><br>Using SQL-workbench to manage data </li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents"id="experience">
+                        <ul>
+                            <li> <span> 2022-Current </span><br>Freelance Developer</li>
+                            <li> <span> 2022-2022 </span><br>Amazon Warehouse Associate  </li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents"id="education">
+                        <ul>
+                            <li> <span> 2022-Current </span><br>Bachelor’s degree in software engineering </li>
+                            <li> <span> 07/2022 </span><br>BTEC Level 3 Extended Diploma IT </li>
+                            <li> <span> 07/2021 </span><br> OCR Level 3 Cambridge Technical Foundation Diploma in IT  </li>
+                        </ul>
+                       </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+<!--------------Project -->
+<div class="projects" id="projects">
+    <div class="project-card">
+        <h2>Virtual Assistant </h2>
+        <img src="images/pexels-cottonbro-studio-5083215.jpg" id="imgs" >
+        <p>I was deeply fascinated with the concept
+             of virtual assistants, so I decided to undertake
+              the challenge of developing my own AI assistant technology. 
+              Through focused effort and commitment, I taught myself the 
+              necessary programming skills and built a rudimentary chatbot
+               application to serve users in an automated fashion. Though 
+               basic in capabilities currently, I intend to continue enhancing 
+               my virtual assistant by adding more complex natural language 
+               processing and conversational abilities over time.</p>
+        <a href="https://www.example.com" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+        <h2> Blackjack Game </h2>
+        <img src="images/pexels-javon-swaby-3279685.jpg" id="imgs" >
+        <p> The goal of blackjack is to build a hand value as close to 21 as possible without going over.
+            The game starts with the dealer dealing out two cards face up to the player and two cards to themselves - one face up and one face down.
+            The card values are tallied based on their numerical rank, with face cards counting as 10 and aces counting as 1 or 11 - whichever benefits the hand the most.
+            The player takes the first turn and can choose to "hit" and be dealt another card from the deck in an attempt to get closer to 21, or "stand" if they are satisfied with their current hand value. 
+            If the player goes over 21, they "bust" and automatically lose the hand. 
+            </p>
+        <a href="https://www.example.com" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+        <h2>Created my own weather App </h2>
+        <img src="images/1531136_4092.jpg" id="imgs" >
+        <p>I have used Java to create a weather applciation. </p>
+        <a href="https://www.example.com" target="_blank">View Project</a>
+    </div>
+    </div>
+    
+</div>
+<!--------------Contact  -->
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+
+</html>
